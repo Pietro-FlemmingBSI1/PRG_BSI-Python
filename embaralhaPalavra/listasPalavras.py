@@ -59,6 +59,7 @@ def escolha(tema, dificuldade):
         "espanha",
         "italia",
         "franca",
+        "cazaquistao",
     ]
     lista = []
     lista_palavras = []
