@@ -55,11 +55,13 @@ def escolha(tema, dificuldade):
         "colombia",
         "venezuela",
         "alemanha",
-        "postugal",
+        "portugal",
         "espanha",
         "italia",
         "franca",
         "cazaquistao",
+        "groenlandia",
+        "madagascar"
     ]
     lista = []
     lista_palavras = []
