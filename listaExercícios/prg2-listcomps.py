@@ -39,7 +39,7 @@ def mulher_homem(mulher, homem):
 def produto_cartesiano(homens, mulheres):
     """5. Gere uma lista associativa para organizar uma aula de dança na qual
     todos devem dançar com todos. Quantos casais serão formados?
-    Dica: o nome da operação a ser feita neste exercício é produto cartesiano,
+    Dica: o nome da operação a ser feita neste exercício é produto cartesiano
     e para fazer isso em uma listcomp ou genexp você precisa usar mais de um
     for dentro da expressão."""
     return [(homem,mulher) for homem in homens for mulher in mulheres]
@@ -97,7 +97,7 @@ def intercalamento_listas(lista1, lista2):
     """Usando 'lista1' e 'lista2', ambas do mesmo comprimento,
     crie uma nova lista composta pelo
     intercalamento entre as duas."""
-
+    return [x for y in zip(lista1,lista2) for x in y]
 
 def numeros_sortudos(limite_inferior=1, limite_superior=100000):
     """Daniela é uma pessoa muito supersticiosa. Para ela, um número é
@@ -108,9 +108,7 @@ def numeros_sortudos(limite_inferior=1, limite_superior=100000):
     Dica: faça uma função de validação e outra que a chama e
     verifica o intervalo dado
     """
-    return len[ i for i in range(limite_inferior,limite_superior) if str(i).count(2) > 0 and str(i).count(7) == 0]
-
-
+    return len([x for x in range(limite_inferior,limite_superior) if str(x).count('2') != 0 and str(x).count('7') == 0])
 # Área de testes: só mexa aqui se souber o que está fazendo!
 acertos = 0
 total = 0
