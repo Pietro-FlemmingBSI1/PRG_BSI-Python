@@ -4,10 +4,6 @@
 # Resolva os exercícios tentando usar compreensão de lista onde possível.
 # Pode colocar a solução diretamente no return, sem criar variáveis.
 
-
-from sre_compile import isstring
-
-
 def nomes_com_menos_de_4_letras(lista):
     """ Use uma listcomp para gerar uma lista de homens com nomes de 4 ou menos letras."""
     return [nome for nome in lista if len(nome) <= 4]
@@ -109,6 +105,7 @@ def numeros_sortudos(limite_inferior=1, limite_superior=100000):
     verifica o intervalo dado
     """
     return len([x for x in range(limite_inferior,limite_superior) if str(x).count('2') != 0 and str(x).count('7') == 0])
+    
 # Área de testes: só mexa aqui se souber o que está fazendo!
 acertos = 0
 total = 0
