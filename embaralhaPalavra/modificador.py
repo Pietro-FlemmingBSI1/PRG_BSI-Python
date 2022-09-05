@@ -1,4 +1,4 @@
-from random import shuffle, randint
+from random import shuffle, choice
 
 def selecionador(lista_palavras):
     lista_falhou = [
@@ -7,10 +7,8 @@ def selecionador(lista_palavras):
         "Essa foi por pouco, que tal tentar denovo.",
     ]
 
-    palavra = randint(0, len(lista_palavras) - 1)
-    palavra = lista_palavras[palavra]
-    multivacional = randint(0, len(lista_falhou) - 1)
-    multivacional = lista_falhou[multivacional]
+    palavra = choice(lista_palavras)
+    multivacional = choice(lista_falhou)
     return palavra, multivacional
 
 
