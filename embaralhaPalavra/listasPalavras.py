@@ -1,4 +1,5 @@
 def escolha(tema, dificuldade):
+    # Listas com opções de temas.
     lista_cores = [
         "roxo",
         "preto",
@@ -63,21 +64,31 @@ def escolha(tema, dificuldade):
         "groenlandia",
         "madagascar"
     ]
-    lista = []
-    lista_palavras = []
+    lista_palavras = [] # Lista onde será adicionada as palavra que passarem no filtro das escolhas do usuário.
 
     if tema == 1:
-        lista = lista_cores
+        for p in lista_cores:
+            if len(p) <= 5 and dificuldade == 1:
+                lista_palavras.append(p)
+            elif len(p) > 5 and len(p) <= 7 and dificuldade == 2:
+                lista_palavras.append(p)
+            elif len(p) >= 8 and dificuldade == 3:
+                lista_palavras.append(p)
     elif tema == 2:
-        lista = lista_objetos
+        for p in lista_objetos:
+            if len(p) <= 5 and dificuldade == 1:
+                lista_palavras.append(p)
+            elif len(p) > 5 and len(p) <= 7 and dificuldade == 2:
+                lista_palavras.append(p)
+            elif len(p) >= 8 and dificuldade == 3:
+                lista_palavras.append(p)
     elif tema == 3:
-        lista = lista_paises
+        for p in lista_paises:
+            if len(p) <= 5 and dificuldade == 1:
+                lista_palavras.append(p)
+            elif len(p) > 5 and len(p) <= 7 and dificuldade == 2:
+                lista_palavras.append(p)
+            elif len(p) >= 8 and dificuldade == 3:
+                lista_palavras.append(p)
 
-    for p in lista:
-        if len(p) <= 5 and dificuldade == 1:
-            lista_palavras.append(p)
-        elif len(p) > 5 and len(p) <= 7 and dificuldade == 2:
-            lista_palavras.append(p)
-        elif len(p) >= 8 and dificuldade == 3:
-            lista_palavras.append(p)
     return lista_palavras
