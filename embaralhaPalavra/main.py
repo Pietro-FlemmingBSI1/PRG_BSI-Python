@@ -2,7 +2,7 @@ from listasPalavras import escolha
 from modificador import selecionador, ordenador
 
 
-def main():
+def main(): # Roda o programa principal.
     tema = int(input("Escolha o tema:\n1 - Cores\n2 - Objetos\n3 - Países\n")) # Usuário escolhe o tema.
     dificuldade = int(input("Escolha a dificuldade:\n1 - Fácil\n2 - Médio\n3 - Difícil\n")) # Usuário escolhe a dificuldade.
     lista_palavras = escolha(tema, dificuldade) # Gera uma lista com as palavras que se encaixam nas escolhas do usuário.

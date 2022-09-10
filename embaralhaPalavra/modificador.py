@@ -1,6 +1,6 @@
 from random import shuffle, choice
 
-def selecionador(lista_palavras):
+def selecionador(lista_palavras): # Recebe uma lista de palavras e retorna uma palavra e uma frase de derrota.
     # Lista de mensagens caso o usuário perca.
     lista_falhou = [
         "Não foi dessa vez, tente denovo, eu sei que você consegue!",
@@ -13,7 +13,7 @@ def selecionador(lista_palavras):
     return palavra, multivacional
 
 
-def ordenador(palavra):
+def ordenador(palavra): # Recebe uma palavra e retorna a mesma com a ordem das letras trocadas.
     palavra_lista = []
     palavra = palavra.lower()
     for l in palavra:

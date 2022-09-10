@@ -1,4 +1,4 @@
-def escolha(tema, dificuldade):
+def escolha(tema, dificuldade): # Recebe um tema e uma dificuldade e retorna uma lista de palavras que se encaixam nos parâmetros. 
     # Listas com opções de temas.
     lista_cores = [
         "roxo",
