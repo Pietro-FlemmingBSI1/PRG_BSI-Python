@@ -86,7 +86,7 @@ def explode_string(s):
     explode_string('abc') -> 'aababc'
     explode_string('ab') -> 'aab'
     """
-    return ''.join(s[0:cont + 1] for cont,l in enumerate(s))
+    return ''.join(s[0:cont + 1] for cont,_ in enumerate(s))
 
 
 def intercalamento_listas(lista1, lista2):
