@@ -77,7 +77,7 @@ def gago(texto):
     gago("preciso tirar dez") -> "p-preciso t-tirar d-dez"
     gago("eu deveria ter estudado mais") -> "e-eu d-deveria t-ter e-estudado m-mais"
     """
-    return (''.join(l[0]+'-'+l+' ' for l in texto.split(' ')))[:-1]
+    return ' '.join(f"{l[0]}-{l}" for l in texto.split())
 
 
 def explode_string(s):
