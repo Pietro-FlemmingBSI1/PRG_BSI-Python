@@ -1,3 +1,5 @@
+from matplotlib
+
 if __name__ == "__main__":
     with open("Alice_Maravilhas.txt") as file:
         texto = file.read().lower()
