@@ -25,6 +25,10 @@ def main(): # Roda o programa principal.
         print(multivacional)
     else:
         print(f"Voce precisou de: {tentativas+1} tentativas\n")
+    
+    continuar = ("Deseja continuar ? 1- Sim 2- Não")
+    if continuar == 1: main()
+
 
 
 if __name__ == "__main__":
