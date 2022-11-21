@@ -32,15 +32,17 @@ def tarefa4(dados):
 
 def tarefa5(dados):
     import matplotlib.pyplot as plt
-    return dados["SG_UF_RESIDENCIA"].hits(bins = 20,figsize = (10,8))
+    graficoColunas = dados["SG_UF_RESIDENCIA"].hist(bins = 70,figsize = (10,8))
     plt.show()
     plt.close()
+    return graficoColunas
 
 def tarefa6(dados):
     import matplotlib.pyplot as plt
-    return dados["NU_IDADE"].value_counts().plot.pie(figsize = (10,8))
+    graficoPizza = dados["NU_IDADE"].value_counts().plot.pie(figsize = (10,8))
     plt.show()
     plt.close()
+    return graficoPizza
 
 
 if __name__ == "__main__":
