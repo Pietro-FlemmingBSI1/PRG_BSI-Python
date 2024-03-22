@@ -76,7 +76,7 @@ class Grafo_Direcionado:
         nome_arestas = dict([((n1, n2), self.nome_arestas[c]) for c, (n1, n2) in enumerate(self.grafo_imagem.edges)])
         pos = nx.spring_layout(self.grafo_imagem)
         nx.draw(self.grafo_imagem, pos, with_labels=True, font_weight='bold',)
-        nx.draw_networkx_edge_labels(self.grafo_imagem, pos, edge_labels = nome_arestas, font_size = 15, font_color = 'red')
+        nx.draw_networkx_edge_labels(self.grafo_imagem, pos, edge_labels=nome_arestas, font_size=15, font_color='red')
         plt.show()
 
 class Grafo_nao_direcionado:
@@ -122,9 +122,10 @@ class Grafo_nao_direcionado:
         for i in range(self.vertices):
             for j in self.grafo[i]:
                 lista_adjacente[i].append((i + 1, j[0], j[1]))
+                lista_adjacente[j[0] - 1].append((j[0], i + 1, j[1]))
         return lista_adjacente
 
-        def cria_matriz_incidencia(self):
+    def cria_matriz_incidencia(self):
         matriz_incidencia = [[0] * self.arestas for _ in range(self.vertices)]
         alpha_dict = {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5, 'f': 6, 'g': 7, 'h': 8, 'i': 9, 'j': 10, 'k': 11, 'l': 12, 'm': 13, 'n': 14, 'o': 15, 'p': 16, 'q': 17, 'r': 18, 's': 19, 't': 20, 'u': 21, 'v': 22, 'w': 23, 'x': 24, 'y': 25, 'z': 26}
         for v in range(self.vertices):
@@ -149,11 +150,12 @@ class Grafo_nao_direcionado:
         for row in matriz_incidencia:
             print(row)
 
+    
     def imprime_grafo(self):
         nome_arestas = dict([((n1, n2), self.nome_arestas[c]) for c, (n1, n2) in enumerate(self.grafo_imagem.edges)])
         pos = nx.spring_layout(self.grafo_imagem)
-        nx.draw(self.grafo_imagem, pos, with_labels=True, font_weight='bold')
-        nx.draw_networkx_edge_labels(self.grafo_imagem, pos, edge_labels = nome_arestas, font_size = 15, font_color = 'red')
+        nx.draw(self.grafo_imagem, pos, with_labels=True, font_weight='bold',)
+        nx.draw_networkx_edge_labels(self.grafo_imagem, pos, edge_labels=nome_arestas, font_size=15, font_color='red')
         plt.show()
 
 graph_type = input("Qual tipo de grafo você quer criar? (Direcionado / Não direcionado): ").lower()
